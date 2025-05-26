@@ -25,6 +25,7 @@ Un cop dins del terminal, navegarem fins a dins de la carpeta on volem iniciar e
 > Per a iniciar un repositori de Git usarem:
 > ```bash
 > git init
+> dir /a (windows) ls -a (linux)
 > ```
 
 **Exemple:**
@@ -56,6 +57,10 @@ Per tal de que es faci seguiment dels canvis d'un arxiu o carpeta, els hem de pa
 > ```bash
 > git add .
 > ```
+> > També podem tornar enrera i treure el arxiu del staging area i torni al working directori:
+> ```bash
+> git rm --cached arxiu.
+> ```
 
 Aquesta acció no mou el fitxer físicament de lloc dins del disc dur ni el perdrem de vista. A nivell d'usuari de l'ordinador no percebrem cap canvi amb aquest arxiu.
 
@@ -79,6 +84,9 @@ Se li diu zona de proves ja que serveix de pas previ a fer una *captura* de l'es
 >Tot i que en molta documentació no ho recomanen, per a confirmar els canvis pendents de confirmar de tots els arxius i carpetes que hi ha actualment a la staging area, podem usar el **punt**:
 >```bash
 >git commit .
+>echo "adeu" > Main2.kt
+>git status -s
+>git log --oneline
 >```
 
 **Exemple:**
